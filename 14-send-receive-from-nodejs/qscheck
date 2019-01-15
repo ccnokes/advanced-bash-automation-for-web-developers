@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+// this scripts parses a query string and does a value check, e.g.
+// qscheck 'abc=123&def=456' abc 123
+// exits with a 0 for true, 1 for false/error
+
+const { parse } = require('querystring');
+
+const [
+  queryString,
+  queryStringPropName,
+  queryStringExpected
+] = process.argv.slice(2);
+
+if (!queryString || !queryStringPropName || !queryStringExpected) {
+  process.stderr.write(`ERROR! Must pass three args \n`);
+  process.exit(1);
+}
+
+let actual = parse(queryString)[queryStringPropName];
+
+if (actual === queryStringExpected) {
+  process.stdout.write(`${actual} is equal to ${queryStringExpected} \n`);
+  process.exit(0);
+} else {
+  process.stderr.write(`${actual} is not equal to ${queryStringExpected} \n`);
+  process.exit(1);
+}

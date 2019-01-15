@@ -1,0 +1,3 @@
+{"level":"warn", "message":"this is just a warning"}
+{"level":"log", "message":"hi there"}
+{"level":"error", "message":"error occurred!"}
