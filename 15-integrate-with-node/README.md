@@ -1,6 +1,6 @@
 # Transform piped data from bash using a node.js Transform stream
 
-See filter-ldjson.js for the example script.
+See `filter-ldjson.js` for the example script.
 
 ## Additional notes
 You can read more about node.js streams (a pretty deep subject) here: https://nodejs.org/api/stream.html

@@ -1,6 +1,6 @@
 # Use exec to redirect stdio in a git hook script
 
-See hooks/post-merge.
+See `hooks/post-merge` for the main script example. That script will check git's list of changed files and run npm install if package.json was changed after a git pull.
 
 ## Additional notes
 If you ever need to redirect stdio and then restore it back to it's original state, you can do something like this:
@@ -13,7 +13,7 @@ exec > log
 
 # script contents here...
 
-# retore stdout and close fd 3
+# restore stdout and close fd 3
 exec 1>&3 3>&-
 ```
 You can run this directly in the shell to see it in action.

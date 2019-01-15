@@ -6,7 +6,7 @@ cpus=$(node -p 'os.cpus().length')
 echo $cpus
 ```
 
-See qscheck for the example script. We can use that script like so:
+See qscheck for the example script that parses and checks querystring values. We can use that script like so:
 ```bash
 ./qscheck 'abc=123&def=456' abc 123
 echo $? # check the exit status, should be 0
