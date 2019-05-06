@@ -18,6 +18,8 @@ exec 1>&3 3>&-
 ```
 You can run this directly in the shell to see it in action.
 
+If your package.json isn't at the root level, you'll have to add a `-r` to the `git diff-tree` command.
+
 ### Resources
 `exec` can get a little complicated. Here's some more reading materials:
 - https://www.tldp.org/LDP/abs/html/x17974.html
